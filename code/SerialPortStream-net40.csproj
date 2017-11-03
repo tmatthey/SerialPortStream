@@ -71,6 +71,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="HandShake.cs" />
     <Compile Include="InternalApplicationException.cs" />
+    <Compile Include="ISerialPortStream.cs" />
     <Compile Include="Native\INativeSerial.cs" />
     <Compile Include="Native\ISerialBufferSerialData.cs" />
     <Compile Include="Native\ISerialBufferStreamData.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="SerialPinChange.cs" />
     <Compile Include="SerialPinChangedEventArgs.cs" />
     <Compile Include="SerialPortStream.cs" />
+    <Compile Include="SerialPortStreamFakeBase.cs" />
     <Compile Include="Native\Windows\CommState.cs" />
     <Compile Include="Native\Windows\CommProperties.cs" />
     <Compile Include="Native\Windows\CommModemStatus.cs" />

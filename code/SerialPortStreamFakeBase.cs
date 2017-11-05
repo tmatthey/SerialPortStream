@@ -193,9 +193,11 @@
             throw new NotImplementedException();
         }
 
+#pragma warning disable 0067
         public event EventHandler<SerialDataReceivedEventArgs> DataReceived;
         public event EventHandler<SerialErrorReceivedEventArgs> ErrorReceived;
         public event EventHandler<SerialPinChangedEventArgs> PinChanged;
+#pragma warning restore 0067
     }
 #pragma warning restore 1591
 }

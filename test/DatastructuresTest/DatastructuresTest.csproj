@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>    
+    <TargetFrameworks>net40;net45</TargetFrameworks>
+    <Version>2.1.1.0</Version>    
+   </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.5'">
+    <DefineConstants>NETSTANDARD15</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='ne40'">
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
+    <DefineConstants>TRACE;DEBUG;NET40;NET45</DefineConstants>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <PackageReference Include="NUnit" Version="2.6.4" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
+    <PackageReference Include="Shouldly" Version="2.8.3" />
+   <Compile Include="..\..\code\Datastructures\CircularBuffer.cs" />
+    <Compile Include="..\..\code\Datastructures\TimerExpiry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\SerialPortStream.csproj" />
+  </ItemGroup>
+</Project>

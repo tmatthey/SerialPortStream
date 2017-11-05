@@ -83,7 +83,7 @@ namespace RJCP.IO.Ports.SerialPortStreamTest
             /// <remarks>
             /// It is expected that this method be used iteratively to find a single character. 
             /// </remarks>
-            public bool PeekChar(CircularBuffer<byte> buffer)
+            internal bool PeekChar(CircularBuffer<byte> buffer)
             {
                 int bytesRead = 0;
                 if (buffer == null) throw new ArgumentNullException("buffer");

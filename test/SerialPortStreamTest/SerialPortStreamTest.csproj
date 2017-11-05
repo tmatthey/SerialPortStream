@@ -3,6 +3,7 @@
   <PropertyGroup>    
     <TargetFrameworks>net40;net45</TargetFrameworks>
     <Version>2.1.1.0</Version>    
+    <DebugType Condition="'$(TargetFramework)' != '' AND '$(TargetFramework)' != 'netcoreapp1.0'">Full</DebugType>
    </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.5'">
     <DefineConstants>NETSTANDARD15</DefineConstants>
@@ -12,19 +13,22 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
     <DefineConstants>TRACE;DEBUG;NET40;NET45</DefineConstants>
-  </PropertyGroup>  
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Configuration" />
-    <PackageReference Include="NUnit" Version="2.6.4" />
-    <PackageReference Include="Shouldly" Version="2.8.3" />
+    <PackageReference Include="NUnit" Version="3.7.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
+    <PackageReference Include="Shouldly" Version="2.8.3" />
     <Compile Include="..\..\code\Datastructures\CircularBuffer.cs" />
     <Compile Include="..\..\code\Datastructures\TimerExpiry.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\code\SerialPortStream.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 </Project>

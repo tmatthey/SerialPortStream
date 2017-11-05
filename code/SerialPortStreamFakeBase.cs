@@ -18,6 +18,29 @@
     {
         private string m_Version;
 
+        public SerialPortStreamFakeBase()
+        {
+        }
+
+         public SerialPortStreamFakeBase(string port) : this()
+         {
+            PortName = port;
+         }
+
+         public SerialPortStreamFakeBase(string port, int baud)
+            : this(port)
+         {
+            BaudRate = baud;
+         }
+
+        public SerialPortStreamFakeBase(string port, int baud, int data, Parity parity, StopBits stopbits)
+            : this(port)
+        {
+            BaudRate = baud;
+            DataBits = data;
+            Parity = parity;
+            StopBits = stopbits;
+        }
         public string Version
         {
             get
